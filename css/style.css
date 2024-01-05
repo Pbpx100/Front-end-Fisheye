@@ -151,5 +151,66 @@ textarea {
     width: 100%;
     height: 100%;
     border-radius: 10px;
+}
+.photo_section article .photo-desc {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+.photo_section article .photo-desc .material-symbols-outlined {
+    cursor: pointer;
+}
+.likes {
+    color: #901C1C;
+    font-size: 1.125em;
+    font-weight: 800;
+}
+.material-icons {
+    color: #901C1C;
+    font-size: 0.8em;
+    font-weight: 800;
 
+}
+.photo_section article .likes-number {
+    display: flex;
+}
+.likes-number .material-icons {
+    cursor: pointer;
+}
+.photo_section article h2 {
+    color: #D3573C;
+    font-size: 1em;
+}
+.click-counter {
+    color: black;
+    position: fixed;
+    bottom: 0px;
+    width: 270px;
+    height: 60px;
+    right: 26px;
+    background: rgb(216, 136, 118);
+    display: flex;
+    font-size: 1.5em;
+    justify-content: space-between;
+    padding: 10px 30px;
+    align-items: center;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+
+}
+.like_number_heart {
+    display: flex;
+    justify-content: space-between;
+    width: 73px;
+    align-items: center;
+    font-weight: 600;
+}
+.click-counter .likesTotal {
+    color: black;
+    font-weight: 600;
+}
+.click-counter span {
+    color: black;
+    font-weight: 600;
 }
