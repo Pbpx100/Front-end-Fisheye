@@ -56,8 +56,25 @@
         </button>
       </div>
     </div>
-      
-    </main>
+      <div class="photo_section"></div>
+    <div id="lightbox" role="dialog" aria-describedby="Lightbox">
+      <button id="prevBtn">
+        <span class="material-icons" title="image précédente" tabindex="0">arrow_back_ios_new</span>
+      </button>
+      <div class="photo-close">
+        <figure id="lightbox-content">
+        </figure>
+        <button id="closeBtn">
+          <span class="material-icons" title="fermer" tabindex="0">close</span>
+        </button>
+      </div>
+      <button id="nextBtn" tabindex="0">
+        <span class="material-icons" title="image suivante">arrow_forward_ios</span>
+      </button>
+    </div>
+    <div class="click-counter"></div>
+  </main>
+  <footer></footer>
     <script src="/scripts/pages/photographer.js"></script>
     <script src="/scripts/utils/contactForm.js"></script>
   </body>
