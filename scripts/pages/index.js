@@ -21,3 +21,12 @@ async function displayData(photographers) {
         photographersSection.innerHTML += userCardDOM;
     });
 }
+//Calling the functions when are ready
+async function init() {
+    // Récupère les datas des photographes
+    const { photographers } = await getPhotographers();
+    displayData(photographers);
+}
+
+init();
+
