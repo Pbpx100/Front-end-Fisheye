@@ -145,4 +145,49 @@ function trierAll(trier) {
     sortFu()
 
 }
+//Toggle the list trier
+
+function toggleList() {
+    var elementlick = document.querySelector('.arrow');
+    var elementosLista = document.querySelector('.options-list');
+    var hover = elementosLista.querySelectorAll('li')
+
+    elementlick.innerText == 'expand_more' ? elementlick.innerHTML = 'expand_less' : elementlick.innerHTML = 'expand_more'
+    for (let i = 1; i < hover.length; i++) {
+        hover[i].style.display = (hover[i].style.display === 'block') ? 'none' : 'block';
+        hover[i].style.display = (hover[i].classList.contains === 'd-line') ? hover[i].classList.remove('d-line') : hover[i].classList.add('d-line');
+        //stopPropagation();
+    }
+}
+
+//Toggle like and add a number of like or rest a number of like
+function toggleLike(elementClick) {
+    var elemt = elementClick.previousElementSibling
+    const elemtChildIcon = elementClick.children[0]
+    console.log(elemtChildIcon.innerText)
+
+    var totalLikes = document.querySelector(".likesTotal")
+    var totalLikesNum = parseInt(totalLikes.innerText)
+
+    var likesNum = 0;
+    if (elementClick.classList.contains('liked')) {
+        elementClick.classList.remove('liked')
+        elemtChildIcon.innerHTML = 'favorite_border'
+        likesNum = parseInt(elemt.innerText)
+        //console.log(elemt)
+        likesNum--;
+        totalLikesNum--
+        elemt.innerHTML = likesNum
+        totalLikes.innerHTML = totalLikesNum
+    } else {
+        elementClick.classList.add('liked')
+        elemtChildIcon.innerHTML = 'favorite'
+        likesNum = parseInt(elemt.innerText)
+        likesNum++
+        totalLikesNum++
+        elemt.innerHTML = likesNum
+        totalLikes.innerHTML = totalLikesNum
+    }
+
+}
 
