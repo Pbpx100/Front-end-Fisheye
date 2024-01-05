@@ -40,6 +40,23 @@
         </form>
       </div>
     </div>
+    <div class="trier">
+      <p>Trier par</p>
+      <div class="trie">
+        <ul class="options-list" id="options-list">
+          <li class="list-elements-filtre" aria-labelledby="selectButton" data-value="popularity" tabindex="0"
+            id="list-populaire">Popularité</li>
+          <li class="list-elements-filtre" aria-labelledby="selectButton" data-value="date" tabindex="0" id="list-date">
+            Date</li>
+          <li aria-labelledby="selectButton" class="list-elements-filtre" data-value="titre" tabindex="0"
+            id="list-title">Titre</li>
+        </ul>
+        <button aria-controls="options-list" id="selectButton" aria-labelledby="selectButton">
+          <span class="material-icons arrow" title="options">expand_more</span>
+        </button>
+      </div>
+    </div>
+      
     </main>
     <script src="/scripts/pages/photographer.js"></script>
     <script src="/scripts/utils/contactForm.js"></script>
