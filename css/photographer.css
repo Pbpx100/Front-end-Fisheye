@@ -41,3 +41,53 @@
     justify-content: end;
     margin: 0px 15px;
 }
+#main-header section .perso_photo img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+#main-header .contact_button {
+    margin: auto 15px;
+}
+#photos,
+.contact_button {
+    font-size: 1.25em;
+    font-weight: bold;
+    color: white;
+    padding: 10px;
+    border: none;
+    width: 170px;
+    height: 70px;
+    background-color: #901C1C;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.trier {
+    display: flex;
+    margin: 0px 100px;
+    align-items: center;
+    padding-bottom: 50px;
+    width: 400px;
+}
+.trier label {
+    margin-right: 10px;
+}
+.trie {
+    font-weight: bold;
+    display: flex;
+    height: 50px;
+}
+#selectButton {
+    position: relative;
+    font-size: 1.25em;
+    background-color: #901C1C;
+    border: none;
+    color: white;
+    right: 31px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 30px;
+    border-top-right-radius: 5px;
+}
