@@ -141,3 +141,128 @@
     align-items: center;
     justify-content: space-between;
 }
+.modal {
+    border-radius: 5px;
+    background-color: #DB8876;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 35px;
+    margin: auto;
+}
+.modal header {
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 0px;
+
+}
+.modal header img {
+    cursor: pointer;
+}
+.modal header h2 {
+    font-size: 3.125em;
+    font-weight: normal;
+    text-align: left;
+    color: black;
+    margin-right: 1.875em;
+    max-width: 50%;
+}
+#btn_close_cont_modal {
+    background-color: transparent;
+    border: none;
+    align-self: baseline;
+    cursor: pointer;
+}
+#btn_close_cont_modal .material-icons {
+    font-size: 4em;
+    color: white;
+}
+form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+}
+form label {
+    color: #312E2E;
+    font-size: 2.25em;
+}
+form div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: self-start;
+    margin-bottom: 26px;
+}
+form input {
+    width: 100%;
+    height: 68px;
+    border: none;
+    border-radius: 5px;
+}
+.photo-close {
+    display: flex;
+    justify-content: center;
+    max-width: 56.25em;
+    max-height: 37.5em;
+}
+#lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    overflow: hidden;
+    z-index: 2;
+    justify-content: center;
+    align-items: center;
+}
+#lightbox-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+#lightbox-content figcaption {
+    align-self: baseline;
+    padding-top: 10px;
+    font-size: 2em;
+    color: #901c1c;
+}
+#lightbox-content img,
+#lightbox-content video {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    border-radius: 10px;
+}
+#prevBtn,
+#nextBtn {
+    cursor: pointer;
+    color: #901c1c;
+    background-color: transparent;
+    border: none;
+}
+#prevBtn .material-icons,
+#nextBtn .material-icons,
+#closeBtn .material-icons {
+    font-size: 3.5em;
+}
+#closeBtn {
+    position: absolute;
+    cursor: pointer;
+    color: #901c1c;
+    order: 2;
+    transform: translate(36em, -2em);
+    background-color: transparent;
+    border: none;
+}
+#prevBtn {
+    margin-right: 1.25em;
+}
+#nextBtn {
+    margin-left: 1.25em;
+}
