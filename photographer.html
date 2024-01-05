@@ -17,25 +17,30 @@
     </a>
   </header>
     <main id="main">
-      <div class="photograph-header">
-        <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
-      </div>
-    </main>
-    <div id="contact_modal">
-			<div class="modal">
-				<header>
-          <h2>Contactez-moi</h2>
-          <img src="assets/icons/close.svg" onclick="closeModal()" />
+      <div id="contact_modal" role="dialog" aria-describedby="Envoyer un message">
+      <div class="modal">
+        <header>
+          <h2>Contactez-moi </h2>
+          <button class="close_modal" id="btn_close_cont_modal" tabindex="0">
+            <span class="material-icons" title="fermer">close</span>
+          </button>
         </header>
-				<form>
-					<div>
-						<label>Prénom</label>
-						<input />
-					</div>
-          <button class="contact_button">Envoyer</button>
-				</form>
-			</div>
-		</div>
+        <form id="contact-form" name="form">
+          <div role="group" aria-labelledby="Coordonnées">
+            <label for="prenom">Prénom</label>
+            <input type="text" id="prenom" name="prenom" aria-required="true">
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" name="nom" aria-required="true">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" aria-required="true">
+            <label for="message">Votre message</label>
+            <textarea id="message" name="message" aria-required="true"></textarea>
+          </div>
+          <button class="contact_button" type="submit" id="btn_cont_send">Envoyer</button>
+        </form>
+      </div>
+    </div>
+    </main>
     <script src="/scripts/pages/photographer.js"></script>
     <script src="/scripts/utils/contactForm.js"></script>
   </body>
