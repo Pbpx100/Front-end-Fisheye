@@ -80,3 +80,69 @@ async function init() {
     ModalPhotoFunc();
 }
 init();
+
+var listButtons = document.getElementsByClassName("list-elements-filtre")
+
+for (let listButton of listButtons) {
+    listButton.addEventListener("click", () => {
+        trierAll(listButton);
+    });
+    listButton.addEventListener("keyup", (e) => {
+        if (e.key === 'Enter' || e.key === 13) {
+            trierAll(listButton);
+        }
+    });
+}
+function trierAll(trier) {
+
+    const elementosArticles = document.querySelectorAll('.filterArticles')
+    const arrayArticles = Array.from(elementosArticles)
+    var contenedor = document.querySelector('.photo_section')
+    select_value = trier.dataset.value
+
+    console.log(select_value)
+
+    function sortByTitle(a, b) {
+        var h2a = a.querySelector('h3.titre').innerText.trim()
+        var h2b = b.querySelector('h3.titre').innerText.trim()
+        return h2a.localeCompare(h2b)
+    }
+    function sortByDate(a, b) {
+        var dateA = new Date(a.querySelector('.date-photos').innerText)
+        var dateB = new Date(b.querySelector('.date-photos').innerText)
+        return dateA - dateB
+    }
+    function sortByPopularity(a, b) {
+        var popularityA = parseInt(a.querySelector('.likes').innerText)
+        var popularityB = parseInt(b.querySelector('.likes').innerText)
+        return popularityB - popularityA
+    }
+
+    function sortDisplay(sortFunction) {
+        arrayArticles.sort(sortFunction)
+        arrayArticles.forEach((article) => {
+            contenedor.appendChild(article)
+        })
+    }
+    //Sort the articles
+    function sortFu() {
+
+        switch (select_value) {
+            case 'titre':
+                sortDisplay(sortByTitle)
+                break;
+            case 'date':
+                sortDisplay(sortByDate)
+                break;
+            case 'popularity':
+                sortDisplay(sortByPopularity)
+                break;
+
+            default:
+                break;
+        }
+    }
+    sortFu()
+
+}
+
